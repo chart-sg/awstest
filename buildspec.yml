@@ -1,0 +1,18 @@
+version: 0.2
+phases:
+  install:
+    runtime-versions:
+      nodejs: 14
+    commands:
+      - echo installing dependencies
+      - npm install
+  pre_build:
+    commands:
+      - echo running pre build now
+  build:
+    commands:
+      - echo running build now
+  post_build:
+    commands:
+      - echo running post build now
+      - npm test
